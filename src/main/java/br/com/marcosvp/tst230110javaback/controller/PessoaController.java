@@ -33,14 +33,14 @@ public class PessoaController {
 	public List<PessoaModel> getAllPessoas(){
 		return serv.getAllPessoas();
 	}
-	
-	@GetMapping("/{id}")
-	public PessoaModel getPessoaById(@PathVariable Long id) {
+
+	@GetMapping(value = "/{id}")
+	public PessoaModel getPessoaById(@PathVariable(value="id") Long id) {
 		return serv.getPessoaById(id);
 	}
 	
-	@GetMapping("/{nome}")
-	public PessoaModel getPessoaById(@PathVariable String nome) {
+	@GetMapping(value = "/nome/{nome}")
+	public PessoaModel getPessoaById(@PathVariable(value="nome") String nome) {
 		return serv.getPessoaByNome(nome);
 	}
 
