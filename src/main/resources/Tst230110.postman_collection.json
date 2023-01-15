@@ -1,0 +1,540 @@
+{
+	"info": {
+		"_postman_id": "0692ea88-4023-4af7-906b-9752d1ea6625",
+		"name": "Tst230110",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13927451"
+	},
+	"item": [
+		{
+			"name": "Incluir Pessoa A (id=1)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"nome\": \"José José\"\r\n    ,\"dataNascimento\": \"1980-12-25\"\r\n    ,\"enderecos\": [\r\n        {\"logradouro\": \"Av Tancredo Neves\"\r\n        ,\"numero\": \"55\"\r\n        ,\"cep\": \"12200123\"\r\n        ,\"cidade\": \"São Caçavapa\"\r\n        ,\"enderecoPrincipal\": true\r\n        },\r\n        {\"logradouro\": \"Rua dos Timbiras\"\r\n        ,\"numero\": \"18\"\r\n        ,\"cidade\": \"Caraguatatuba\"\r\n        ,\"enderecoPrincipal\": false\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/marcosvp/pessoa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"marcosvp",
+						"pessoa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Incluir Pessoa B (id=4)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"nome\": \"Maria Maria Maria\"\r\n    ,\"dataNascimento\": \"1990-02-06\"\r\n    ,\"enderecos\": [\r\n        {\"logradouro\": \"Rua Sol Nascente\"\r\n        ,\"numero\": \"456\"\r\n        ,\"cep\": \"0110000\"\r\n        ,\"cidade\": \"São Paulo\"\r\n        ,\"enderecoPrincipal\": false\r\n        },\r\n        {\"logradouro\": \"Rua dos Timbiras\"\r\n        ,\"numero\": \"12\"\r\n        ,\"cidade\": \"Caraguatatuba\"\r\n        ,\"enderecoPrincipal\": true\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/marcosvp/pessoa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"marcosvp",
+						"pessoa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Incluir Pessoa C (id=7)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"nome\": \"Benedita Benedita Benedita\"\r\n    ,\"dataNascimento\": \"1985-05-12\"\r\n    ,\"enderecos\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/marcosvp/pessoa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"marcosvp",
+						"pessoa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar todas as Pessoas (*)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/marcosvp/pessoa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"marcosvp",
+						"pessoa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Pessoa A (id=1) [antes]",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/marcosvp/pessoa/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"marcosvp",
+						"pessoa",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alterar Pessoa A (id=1)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"id\": 1\r\n    ,\"nome\": \"José José José José\"\r\n    ,\"dataNascimento\": \"1980-12-25\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/marcosvp/pessoa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"marcosvp",
+						"pessoa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Pessoa A (id=1) [depois]",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/marcosvp/pessoa/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"marcosvp",
+						"pessoa",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alterar Pessoa 9 - Que não existe",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"id\": 9\r\n    ,\"nome\": \"José José José José José José\"\r\n    ,\"dataNascimento\": \"1980-12-25\"\r\n    ,\"enderecos\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/marcosvp/pessoa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"marcosvp",
+						"pessoa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Excluir Pessoa A (id=1)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/marcosvp/pessoa/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"marcosvp",
+						"pessoa",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Pessoa A (id=1) que não existe mais",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/marcosvp/pessoa/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"marcosvp",
+						"pessoa",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar todas as Pessoas (**)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/marcosvp/pessoa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"marcosvp",
+						"pessoa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Endereço Pessoa C (id=7) (antes)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/marcosvp/pessoa/endereco/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"marcosvp",
+						"pessoa",
+						"endereco",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Incluir Endereço Pessoa C (id=7)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"logradouro\": \"Av Juscelino Kubitschek\"\r\n,\"numero\": \"1234\"\r\n,\"cidade\": \"São José dos Campos\"\r\n,\"enderecoPrincipal\": true\r\n,\"pessoa\":{\"id\":7}\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/marcosvp/pessoa/endereco",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"marcosvp",
+						"pessoa",
+						"endereco"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Endereço Pessoa C (id=7) (depois)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/marcosvp/pessoa/endereco/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"marcosvp",
+						"pessoa",
+						"endereco",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Endereços Pessoa B (id=4) [antes]",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/marcosvp/pessoa/endereco/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"marcosvp",
+						"pessoa",
+						"endereco",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Incluir 1º Novo Endereço Pessoa B (id=4)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"logradouro\": \"Av Nove de Julho\"\r\n,\"numero\": \"980\"\r\n,\"cidade\": \"São José dos Campos\"\r\n,\"enderecoPrincipal\": true\r\n,\"pessoa\":{\"id\":4}\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/marcosvp/pessoa/endereco",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"marcosvp",
+						"pessoa",
+						"endereco"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Incluir 2º Novo Endereço Pessoa B (id=4)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"logradouro\": \"Av Alabastro\"\r\n,\"numero\": \"87\"\r\n,\"cidade\": \"São José dos Campos\"\r\n,\"enderecoPrincipal\": false\r\n,\"pessoa\":{\"id\":4}\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/marcosvp/pessoa/endereco",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"marcosvp",
+						"pessoa",
+						"endereco"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Endereços Pessoa B (id=4) [depois 1]",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/marcosvp/pessoa/endereco/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"marcosvp",
+						"pessoa",
+						"endereco",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mudar Endereço Principal Pessoa B (id=4)",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idEnd\": 6,\r\n    \"logradouro\": \"Rua dos Timbiras\",\r\n    \"numero\": \"14\",\r\n    \"cep\": null,\r\n    \"cidade\": \"Caraguatatuba\",\r\n    \"enderecoPrincipal\": true,\r\n    \"pessoa\":{\"id\":4}\r\n    }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/marcosvp/pessoa/endereco",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"marcosvp",
+						"pessoa",
+						"endereco"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Endereços Pessoa B (id=4) [depois 2]",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/marcosvp/pessoa/endereco/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"marcosvp",
+						"pessoa",
+						"endereco",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Excluir Endereço Pessoa B (id=4)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/marcosvp/pessoa/endereco/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"marcosvp",
+						"pessoa",
+						"endereco",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

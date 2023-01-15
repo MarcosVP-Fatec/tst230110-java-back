@@ -9,6 +9,10 @@ mvn spring-boot:run -Dspring-boot.run.fork=false
 ## Candidato
 * **Marcos Vinicio Pereira**
 
+## Recursos disponibilizados
+* Arquivo com a coleção de testes do Postman no diterório src/main/resource/Tst230110.postman_collection.json
+
+
 ---------------------------------------------------------------
 ## Avaliação Desenvolvedor Back-end Attornatus
 

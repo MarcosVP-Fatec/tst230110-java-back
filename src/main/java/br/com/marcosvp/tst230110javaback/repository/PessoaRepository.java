@@ -14,21 +14,21 @@ import br.com.marcosvp.tst230110javaback.model.PessoaModel;
  */
 public interface PessoaRepository extends CrudRepository<PessoaModel, Long>{
 
-	@Query("select P from PessoaModel     P								      "
-		  +" left join fetch P.enderecos  E								      "
-		  +" order by upper(P.nome), P.id, E.isEnderecoPrincipal desc, E.idEnd")
+	@Query("select distinct P from PessoaModel P						      "
+		  +" left join fetch P.enderecos       E						      "
+		  +" order by upper(P.nome), P.id, E.enderecoPrincipal desc, E.idEnd")
 	public List<PessoaModel> findAll();
 
 	@Query("select P from PessoaModel    P               "
 		  +" left join fetch P.enderecos E   		     "
 		  +" where P.id = ?1          		  		     "
-		  +" order by E.isEnderecoPrincipal desc, E.idEnd")
+		  +" order by E.enderecoPrincipal desc, E.idEnd")
 	public Optional<PessoaModel> findById(Long id);
 	
 	@Query("select P from PessoaModel    P                     "
 		  +" left join fetch P.enderecos E            		   "	
 		  +" where upper(P.nome) like upper(concat('%',?1,'%'))"
-		  +" order by E.isEnderecoPrincipal desc, E.idEnd      ")
-	public PessoaModel findByNome(String nome);
+		  +" order by E.enderecoPrincipal desc, E.idEnd      ")
+	public Optional<PessoaModel> findContentByNome(String nome);
 
 }

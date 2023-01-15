@@ -43,6 +43,11 @@ public class PessoaModel {
 	@OneToMany(mappedBy = "pessoa", fetch = FetchType.EAGER, cascade = CascadeType.ALL 
 			  ,orphanRemoval = true, targetEntity = PessoaEnderecoModel.class)
 	private List<PessoaEnderecoModel> enderecos;
+	
+	public PessoaModel(){}
+	public PessoaModel(Long id){
+		this.setId(id);
+	}
 
 	public long getId() 							   { return id;						}
 	public void setId(long id) 						   { this.id = id;					}
@@ -52,5 +57,9 @@ public class PessoaModel {
 	public void setDataNascimento(Date dataNascimento) { this.dataNascimento = dataNascimento;	}
 	public List<PessoaEnderecoModel> getEnderecos()    { return enderecos;				}
 	public void setEnderecos(List<PessoaEnderecoModel> enderecos) { this.enderecos = enderecos;	}
+	
+	public static void main(String[] args) {
+		
+	}
 
 }

@@ -47,8 +47,8 @@ public class PessoaEnderecoModel {
 	@Column(name = "cidade"    , length = 60, nullable = false, insertable = true, updatable = true)
 	private String cidade;
 	
-	@Column(name = "is_endereco_principal", nullable = false,  insertable = true, updatable = false)
-	private Boolean isEnderecoPrincipal;
+	@Column(name = "is_endereco_principal", nullable = false,  insertable = true, updatable = true)
+	private boolean enderecoPrincipal;
 
 	//Getters & Setters
 	public long getIdEnd() 							{ return idEnd;					}
@@ -63,7 +63,7 @@ public class PessoaEnderecoModel {
 	public void setCep(String cep) 					{ this.cep = cep;				}
 	public String getCidade() 						{ return cidade;				}
 	public void setCidade(String cidade) 			{ this.cidade = cidade;			}
-	public Boolean getIsEnderecoPrincipal() 		{ return isEnderecoPrincipal;	}
-	public void setIsEnderecoPrincipal(Boolean isEnderecoPrincipal) { this.isEnderecoPrincipal = isEnderecoPrincipal; }
+	public boolean isEnderecoPrincipal() 			{ return enderecoPrincipal;		}
+	public void setEnderecoPrincipal(boolean enderecoPrincipal) { this.enderecoPrincipal = enderecoPrincipal;}
 	
 }
