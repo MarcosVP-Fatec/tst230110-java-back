@@ -1,5 +1,6 @@
 [![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/MarcosVP-Fatec/tst230110-java-back) 
-    Para rodar utilize: mvn spring-boot:run
+* Se não rodar automaticamente execute o comando no terminal: **mvn spring-boot:run**
+* Após rodar pegue o link disponibilizado na aba **'PORTS'** para a porta **8080**.
 
 # Java-Back
 ## Execução com Debug
