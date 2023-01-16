@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.text.ParseException;
+import java.util.Date;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,6 @@ import org.springframework.test.annotation.Rollback;
 import org.springframework.transaction.annotation.Transactional;
 
 import br.com.marcosvp.tst230110javaback.model.PessoaModel;
-import br.com.marcosvp.tst230110javaback.model.TestePessoaModel;
 import br.com.marcosvp.tst230110javaback.pattern.Mensagem;
 import br.com.marcosvp.tst230110javaback.repository.PessoaRepository;
 
@@ -71,7 +71,10 @@ public class TestePessoaService {
 		assertEquals(re.getStatusCode(), HttpStatus.OK, pre+"StatusCode 2");
 		
 		//Exclusão bem sucedida
-		PessoaModel nova = new TestePessoaModel().geraPessoaAleatoria();
+		PessoaModel nova = PessoaModel.build()
+				                      .setId(0L)
+				                      .setNome("YYYYYYYYYYYYYY")
+				                      .setDataNascimento(new Date());
 		pessoaRepo.save(nova);
 		re = pessoaServ.deletaPessoa(nova.getId());
 		body = ( (RespostaHttp) re.getBody() );

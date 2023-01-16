@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "Incluir Pessoa A (id=1)",
+			"name": "01) Incluir Pessoa José (id=1)",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -21,14 +21,11 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/marcosvp/pessoa",
-					"protocol": "http",
+					"raw": "{{baseURL}}/pessoa",
 					"host": [
-						"localhost"
+						"{{baseURL}}"
 					],
-					"port": "8080",
 					"path": [
-						"marcosvp",
 						"pessoa"
 					]
 				}
@@ -36,7 +33,7 @@
 			"response": []
 		},
 		{
-			"name": "Incluir Pessoa B (id=4)",
+			"name": "02) Incluir Pessoa Maria (id=4)",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -50,14 +47,11 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/marcosvp/pessoa",
-					"protocol": "http",
+					"raw": "{{baseURL}}/pessoa",
 					"host": [
-						"localhost"
+						"{{baseURL}}"
 					],
-					"port": "8080",
 					"path": [
-						"marcosvp",
 						"pessoa"
 					]
 				}
@@ -65,7 +59,7 @@
 			"response": []
 		},
 		{
-			"name": "Incluir Pessoa C (id=7)",
+			"name": "03) Incluir Pessoa Benedita (id=7)",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -79,14 +73,11 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/marcosvp/pessoa",
-					"protocol": "http",
+					"raw": "{{baseURL}}/pessoa",
 					"host": [
-						"localhost"
+						"{{baseURL}}"
 					],
-					"port": "8080",
 					"path": [
-						"marcosvp",
 						"pessoa"
 					]
 				}
@@ -94,19 +85,16 @@
 			"response": []
 		},
 		{
-			"name": "Listar todas as Pessoas (*)",
+			"name": "04) Listar todas as Pessoas (*)",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/marcosvp/pessoa",
-					"protocol": "http",
+					"raw": "{{baseURL}}/pessoa",
 					"host": [
-						"localhost"
+						"{{baseURL}}"
 					],
-					"port": "8080",
 					"path": [
-						"marcosvp",
 						"pessoa"
 					]
 				}
@@ -114,19 +102,16 @@
 			"response": []
 		},
 		{
-			"name": "Listar Pessoa A (id=1) [antes]",
+			"name": "05) Listar Pessoa José (id=1) [antes]",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/marcosvp/pessoa/1",
-					"protocol": "http",
+					"raw": "{{baseURL}}/pessoa/1",
 					"host": [
-						"localhost"
+						"{{baseURL}}"
 					],
-					"port": "8080",
 					"path": [
-						"marcosvp",
 						"pessoa",
 						"1"
 					]
@@ -135,7 +120,7 @@
 			"response": []
 		},
 		{
-			"name": "Alterar Pessoa A (id=1)",
+			"name": "06) Alterar Pessoa José (id=1)",
 			"request": {
 				"method": "PUT",
 				"header": [],
@@ -149,14 +134,11 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/marcosvp/pessoa",
-					"protocol": "http",
+					"raw": "{{baseURL}}/pessoa",
 					"host": [
-						"localhost"
+						"{{baseURL}}"
 					],
-					"port": "8080",
 					"path": [
-						"marcosvp",
 						"pessoa"
 					]
 				}
@@ -164,19 +146,16 @@
 			"response": []
 		},
 		{
-			"name": "Listar Pessoa A (id=1) [depois]",
+			"name": "07) Listar Pessoa José (id=1) [depois]",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/marcosvp/pessoa/1",
-					"protocol": "http",
+					"raw": "{{baseURL}}/pessoa/1",
 					"host": [
-						"localhost"
+						"{{baseURL}}"
 					],
-					"port": "8080",
 					"path": [
-						"marcosvp",
 						"pessoa",
 						"1"
 					]
@@ -185,13 +164,13 @@
 			"response": []
 		},
 		{
-			"name": "Alterar Pessoa 9 - Que não existe",
+			"name": "08) Alterar Pessoa Que não existe",
 			"request": {
 				"method": "PUT",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n     \"id\": 9\r\n    ,\"nome\": \"José José José José José José\"\r\n    ,\"dataNascimento\": \"1980-12-25\"\r\n    ,\"enderecos\": []\r\n}",
+					"raw": "{\r\n     \"id\": 99\r\n    ,\"nome\": \"José José José José José José\"\r\n    ,\"dataNascimento\": \"1980-12-25\"\r\n    ,\"enderecos\": []\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -199,14 +178,11 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/marcosvp/pessoa",
-					"protocol": "http",
+					"raw": "{{baseURL}}/pessoa",
 					"host": [
-						"localhost"
+						"{{baseURL}}"
 					],
-					"port": "8080",
 					"path": [
-						"marcosvp",
 						"pessoa"
 					]
 				}
@@ -214,7 +190,7 @@
 			"response": []
 		},
 		{
-			"name": "Excluir Pessoa A (id=1)",
+			"name": "09) Excluir Pessoa José (id=1)",
 			"request": {
 				"method": "DELETE",
 				"header": [],
@@ -228,14 +204,11 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/marcosvp/pessoa/1",
-					"protocol": "http",
+					"raw": "{{baseURL}}/pessoa/1",
 					"host": [
-						"localhost"
+						"{{baseURL}}"
 					],
-					"port": "8080",
 					"path": [
-						"marcosvp",
 						"pessoa",
 						"1"
 					]
@@ -244,19 +217,16 @@
 			"response": []
 		},
 		{
-			"name": "Listar Pessoa A (id=1) que não existe mais",
+			"name": "10) Listar Pessoa José (id=1) que não existe mais",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/marcosvp/pessoa/1",
-					"protocol": "http",
+					"raw": "{{baseURL}}/pessoa/1",
 					"host": [
-						"localhost"
+						"{{baseURL}}"
 					],
-					"port": "8080",
 					"path": [
-						"marcosvp",
 						"pessoa",
 						"1"
 					]
@@ -265,19 +235,16 @@
 			"response": []
 		},
 		{
-			"name": "Listar todas as Pessoas (**)",
+			"name": "11) Listar todas as Pessoas (**)",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/marcosvp/pessoa",
-					"protocol": "http",
+					"raw": "{{baseURL}}/pessoa",
 					"host": [
-						"localhost"
+						"{{baseURL}}"
 					],
-					"port": "8080",
 					"path": [
-						"marcosvp",
 						"pessoa"
 					]
 				}
@@ -285,19 +252,16 @@
 			"response": []
 		},
 		{
-			"name": "Listar Endereço Pessoa C (id=7) (antes)",
+			"name": "12) Listar Endereço Pessoa Benedita (id=7) (antes)",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/marcosvp/pessoa/endereco/7",
-					"protocol": "http",
+					"raw": "{{baseURL}}/pessoa/endereco/7",
 					"host": [
-						"localhost"
+						"{{baseURL}}"
 					],
-					"port": "8080",
 					"path": [
-						"marcosvp",
 						"pessoa",
 						"endereco",
 						"7"
@@ -307,7 +271,7 @@
 			"response": []
 		},
 		{
-			"name": "Incluir Endereço Pessoa C (id=7)",
+			"name": "13) Incluir Endereço Pessoa Benedita (id=7)",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -321,14 +285,11 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/marcosvp/pessoa/endereco",
-					"protocol": "http",
+					"raw": "{{baseURL}}/pessoa/endereco",
 					"host": [
-						"localhost"
+						"{{baseURL}}"
 					],
-					"port": "8080",
 					"path": [
-						"marcosvp",
 						"pessoa",
 						"endereco"
 					]
@@ -337,19 +298,16 @@
 			"response": []
 		},
 		{
-			"name": "Listar Endereço Pessoa C (id=7) (depois)",
+			"name": "14) Listar Endereço Pessoa Benedita (id=7) (depois)",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/marcosvp/pessoa/endereco/7",
-					"protocol": "http",
+					"raw": "{{baseURL}}/pessoa/endereco/7",
 					"host": [
-						"localhost"
+						"{{baseURL}}"
 					],
-					"port": "8080",
 					"path": [
-						"marcosvp",
 						"pessoa",
 						"endereco",
 						"7"
@@ -359,19 +317,16 @@
 			"response": []
 		},
 		{
-			"name": "Listar Endereços Pessoa B (id=4) [antes]",
+			"name": "15) Listar Endereços Pessoa Maria (id=4) [antes]",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/marcosvp/pessoa/endereco/4",
-					"protocol": "http",
+					"raw": "{{baseURL}}/pessoa/endereco/4",
 					"host": [
-						"localhost"
+						"{{baseURL}}"
 					],
-					"port": "8080",
 					"path": [
-						"marcosvp",
 						"pessoa",
 						"endereco",
 						"4"
@@ -381,7 +336,7 @@
 			"response": []
 		},
 		{
-			"name": "Incluir 1º Novo Endereço Pessoa B (id=4)",
+			"name": "16) Incluir 1º Novo Endereço Pessoa Maria (id=4)",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -395,14 +350,11 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/marcosvp/pessoa/endereco",
-					"protocol": "http",
+					"raw": "{{baseURL}}/pessoa/endereco",
 					"host": [
-						"localhost"
+						"{{baseURL}}"
 					],
-					"port": "8080",
 					"path": [
-						"marcosvp",
 						"pessoa",
 						"endereco"
 					]
@@ -411,7 +363,7 @@
 			"response": []
 		},
 		{
-			"name": "Incluir 2º Novo Endereço Pessoa B (id=4)",
+			"name": "17) Incluir 2º Novo Endereço Pessoa Maria (id=4)",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -425,14 +377,11 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/marcosvp/pessoa/endereco",
-					"protocol": "http",
+					"raw": "{{baseURL}}/pessoa/endereco",
 					"host": [
-						"localhost"
+						"{{baseURL}}"
 					],
-					"port": "8080",
 					"path": [
-						"marcosvp",
 						"pessoa",
 						"endereco"
 					]
@@ -441,19 +390,16 @@
 			"response": []
 		},
 		{
-			"name": "Listar Endereços Pessoa B (id=4) [depois 1]",
+			"name": "18) Listar Endereços Pessoa Maria (id=4) [depois 1]",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/marcosvp/pessoa/endereco/4",
-					"protocol": "http",
+					"raw": "{{baseURL}}/pessoa/endereco/4",
 					"host": [
-						"localhost"
+						"{{baseURL}}"
 					],
-					"port": "8080",
 					"path": [
-						"marcosvp",
 						"pessoa",
 						"endereco",
 						"4"
@@ -463,7 +409,7 @@
 			"response": []
 		},
 		{
-			"name": "Mudar Endereço Principal Pessoa B (id=4)",
+			"name": "19) Mudar Endereço Principal Pessoa Maria (id=4)",
 			"request": {
 				"method": "PATCH",
 				"header": [],
@@ -477,14 +423,11 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/marcosvp/pessoa/endereco",
-					"protocol": "http",
+					"raw": "{{baseURL}}/pessoa/endereco",
 					"host": [
-						"localhost"
+						"{{baseURL}}"
 					],
-					"port": "8080",
 					"path": [
-						"marcosvp",
 						"pessoa",
 						"endereco"
 					]
@@ -493,19 +436,16 @@
 			"response": []
 		},
 		{
-			"name": "Listar Endereços Pessoa B (id=4) [depois 2]",
+			"name": "20) Listar Endereços Pessoa Maria (id=4) [depois 2]",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/marcosvp/pessoa/endereco/4",
-					"protocol": "http",
+					"raw": "{{baseURL}}/pessoa/endereco/4",
 					"host": [
-						"localhost"
+						"{{baseURL}}"
 					],
-					"port": "8080",
 					"path": [
-						"marcosvp",
 						"pessoa",
 						"endereco",
 						"4"
@@ -515,22 +455,38 @@
 			"response": []
 		},
 		{
-			"name": "Excluir Endereço Pessoa B (id=4)",
+			"name": "21) Excluir Endereço Pessoa Maria (id=4)",
 			"request": {
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/marcosvp/pessoa/endereco/5",
-					"protocol": "http",
+					"raw": "{{baseURL}}/pessoa/endereco/5",
 					"host": [
-						"localhost"
+						"{{baseURL}}"
 					],
-					"port": "8080",
 					"path": [
-						"marcosvp",
 						"pessoa",
 						"endereco",
 						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "20) Listar Endereços Pessoa Maria (id=4) [depois 3]",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/pessoa/endereco/4",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"pessoa",
+						"endereco",
+						"4"
 					]
 				}
 			},
