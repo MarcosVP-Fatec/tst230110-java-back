@@ -51,19 +51,24 @@ public class PessoaEnderecoModel {
 	private boolean enderecoPrincipal;
 
 	//Getters & Setters
-	public long getIdEnd() 							{ return idEnd;					}
-	public void setIdEnd(long idEnd)				{ this.idEnd = idEnd;			}
-	public PessoaModel getPessoa() 					{ return pessoa;				}
-	public void setPessoa(PessoaModel pessoa) 		{ this.pessoa = pessoa;			}
-	public String getLogradouro() 					{ return logradouro;			}
-	public void setLogradouro(String logradouro) 	{ this.logradouro = logradouro;	}
-	public String getNumero() 						{ return numero;				}
-	public void setNumero(String numero) 			{ this.numero = numero;			}
-	public String getCep() 							{ return cep;					}
-	public void setCep(String cep) 					{ this.cep = cep;				}
-	public String getCidade() 						{ return cidade;				}
-	public void setCidade(String cidade) 			{ this.cidade = cidade;			}
+	public long getIdEnd() 									{ return idEnd;									}
+	public PessoaEnderecoModel setIdEnd(long idEnd)			{ this.idEnd = idEnd; return this;				}
+	public PessoaModel getPessoa() 							{ return pessoa;								}
+	public PessoaEnderecoModel setPessoa(PessoaModel pessoa){ this.pessoa = pessoa; return this;			}
+	public String getLogradouro() 							{ return logradouro;							}
+	public PessoaEnderecoModel setLogradouro(String logradouro){ this.logradouro = logradouro; return this;	}
+	public String getNumero() 								{ return numero;								}
+	public PessoaEnderecoModel setNumero(String numero) 	{ this.numero = numero;	return this;			}
+	public String getCep() 									{ return cep;									}
+	public PessoaEnderecoModel setCep(String cep) 			{ this.cep = cep; return this;					}
+	public String getCidade() 								{ return cidade;								}
+	public PessoaEnderecoModel setCidade(String cidade) 	{ this.cidade = cidade;	return this;			}
 	public boolean isEnderecoPrincipal() 			{ return enderecoPrincipal;		}
-	public void setEnderecoPrincipal(boolean enderecoPrincipal) { this.enderecoPrincipal = enderecoPrincipal;}
+	public PessoaEnderecoModel setEnderecoPrincipal(boolean enderecoPrincipal) { this.enderecoPrincipal = enderecoPrincipal; return this;}
+	
+	//Builder
+	public static PessoaEnderecoModel build() {
+		return new PessoaEnderecoModel();
+	}
 	
 }

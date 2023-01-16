@@ -116,8 +116,8 @@ public class PessoaController {
 	}
 
 	@DeleteMapping("/{id}")
-	public void deletaPessoa(@PathVariable Long id) {
-		serv.deletaPessoa(id);
+	public ResponseEntity<?> deletaPessoa(@PathVariable Long id) {
+		return serv.deletaPessoa(id);
 	}
 	
 	@DeleteMapping("/endereco/{idEnd}")

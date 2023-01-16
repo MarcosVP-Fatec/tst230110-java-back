@@ -17,16 +17,19 @@ import br.com.marcosvp.tst230110javaback.exception.RegistroJaExisteException;
 import br.com.marcosvp.tst230110javaback.exception.RegistroNaoExisteException;
 import br.com.marcosvp.tst230110javaback.model.PessoaEnderecoModel;
 import br.com.marcosvp.tst230110javaback.model.PessoaModel;
+import br.com.marcosvp.tst230110javaback.pattern.Mensagem;
 import br.com.marcosvp.tst230110javaback.repository.PessoaRepository;
 
 @Service
 public class PessoaService {
 
 	@Autowired
-	PessoaRepository pessoaRepo;
+	private PessoaRepository pessoaRepo;
 	
 	@Autowired
-	PessoaEnderecoService pessoaEndServ;
+	private PessoaEnderecoService pessoaEndServ;
+	
+	private Mensagem msg = Mensagem.getInstance();
 	
 	public List<PessoaModel> getAllPessoas(){
 		return pessoaRepo.findAll();
@@ -106,17 +109,27 @@ public class PessoaService {
 		}
 	}
 
-	public void deletaPessoa(Long id) {
+	public ResponseEntity<?> deletaPessoa(Long id) {
 		
+		if (id == 0) {
+			return RespostaHttp.buildError(msg.get("pessoa.identificador.nao.informado"), HttpStatus.CONFLICT);
+		}
+		
+		if (!pessoaRepo.existsById(id)) {
+			return RespostaHttp.buildMessage(msg.get("pessoa.exclusao.jah.foi.anteriormente",id), HttpStatus.OK);
+		}
+
 		try {
 			
 			pessoaRepo.deleteById(id);
+			return RespostaHttp.buildMessage(msg.get("pessoa.exclusao.sucesso",id), HttpStatus.OK);
 
 		} catch (Exception e) {
 
-			ResponseEntity.internalServerError().body(e.getMessage());
+			return ResponseEntity.internalServerError().body(e.getMessage());
 
 		}
+		
 	}
 
 }

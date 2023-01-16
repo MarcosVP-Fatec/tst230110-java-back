@@ -96,8 +96,7 @@ public class PessoaEnderecoService {
 			return RespostaHttp.buildError("Identificador do endereço não informado!", HttpStatus.CONFLICT);
 		}
 		
-		Optional<PessoaEnderecoModel> endDel = pessoaEndRepo.findById(idEnd);
-		if (!endDel.isPresent()) {
+		if (!pessoaEndRepo.existsById(idEnd)) {
 			return RespostaHttp.buildMessage("Este endereço já foi excluído anteriormente!", HttpStatus.OK);
 		}
 		

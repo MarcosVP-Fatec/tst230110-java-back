@@ -1,5 +1,6 @@
 package br.com.marcosvp.tst230110javaback.model;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -50,16 +51,21 @@ public class PessoaModel {
 	}
 
 	public long getId() 							   { return id;						}
-	public void setId(long id) 						   { this.id = id;					}
+	public PessoaModel setId(long id) 				   { this.id = id; return this; 	}
 	public String getNome() 						   { return nome;					}
-	public void setNome(String nome) 				   { this.nome = nome;				}
+	public PessoaModel setNome(String nome) 		   { this.nome = nome; return this; }
 	public Date getDataNascimento() 				   { return dataNascimento;			}
-	public void setDataNascimento(Date dataNascimento) { this.dataNascimento = dataNascimento;	}
+	public PessoaModel setDataNascimento(Date dataNascimento) { this.dataNascimento = dataNascimento; return this;	}
 	public List<PessoaEnderecoModel> getEnderecos()    { return enderecos;				}
-	public void setEnderecos(List<PessoaEnderecoModel> enderecos) { this.enderecos = enderecos;	}
+	public PessoaModel setEnderecos(List<PessoaEnderecoModel> enderecos) { this.enderecos = enderecos; return this;	}
 	
-	public static void main(String[] args) {
-		
+	//Builder
+	public static PessoaModel build() {
+		return new PessoaModel().setEnderecos(new ArrayList<PessoaEnderecoModel>());
 	}
-
+	public PessoaModel addEndereco(PessoaEnderecoModel novoEndereco) {
+		this.getEnderecos().add(novoEndereco);
+		return this;
+	}
+	
 }
