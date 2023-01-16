@@ -1,7 +1,7 @@
 [![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/MarcosVP-Fatec/tst230110-java-back) 
 * Se não rodar automaticamente execute o comando no terminal: **mvn spring-boot:run**
 * Ignorar os avisos de "Install"
-* Após rodar pegue o link disponibilizado na aba **'PORTS'** para a porta **8080**.
+* Após rodar pegue o link disponibilizado na aba **'PORTS'** para a porta **8080**. Pode ser necessário clicar no cadeado para mutar o State para **open(public)**
 
 # Java-Back
 ## Execução com Debug
